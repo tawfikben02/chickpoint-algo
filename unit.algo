@@ -1,0 +1,35 @@
+
+Variables:
+  charCount ← 0       // Count of characters
+  wordCount ← 0       // Count of words
+  vowelCount ← 0      // Count of vowels
+  vowels ← ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+
+Begin
+  Read sentence character by character until the period (.)
+  
+  While not end of input
+    Read character ch
+    Increment charCount
+
+    If ch is in vowels then
+      Increment vowelCount
+    EndIf
+
+    If ch is a space then
+      Increment wordCount
+    EndIf
+
+    If ch is '.' then
+      Exit loop
+    EndIf
+  EndWhile
+
+  If charCount > 1 then
+    wordCount ← wordCount + 1   // To count the last word
+  EndIf
+
+  Output "Length of sentence (characters):", charCount
+  Output "Number of words:", wordCount
+  Output "Number of vowels:", vowelCount
+End
